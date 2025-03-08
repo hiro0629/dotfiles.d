@@ -13,9 +13,11 @@ fi
 # ln -sf "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
 # ln -sf "$DOTFILES_DIR/zsh/zsh_profile" "$HOME/.zsh_profile"
 ln -sf "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
+ln -sf "$DOTFILES_DIR/vimrc" "$HOME/.vimrc"
+ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES_DIR/tmux.conf" "$HOME/.tmux.conf"
 if [[ "$OS_TYPE" == "Linux" ]]; then
 	ln -sf "$DOTFILES_DIR/inputrc" "$HOME/.inputrc"
 fi
-ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
 
 echo "Dotfiles installation complete!"

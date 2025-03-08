@@ -19,5 +19,6 @@ ln -sf "$DOTFILES_DIR/tmux.conf" "$HOME/.tmux.conf"
 if [[ "$OS_TYPE" == "Linux" ]]; then
 	ln -sf "$DOTFILES_DIR/inputrc" "$HOME/.inputrc"
 fi
+ln -sf "$DOTFILES_DIR/wezterm.lua" "$HOME/.wezterm.lua"
 
 echo "Dotfiles installation complete!"

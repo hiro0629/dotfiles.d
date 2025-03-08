@@ -20,5 +20,6 @@ if [[ "$OS_TYPE" == "Linux" ]]; then
 	ln -sf "$DOTFILES_DIR/inputrc" "$HOME/.inputrc"
 fi
 ln -sf "$DOTFILES_DIR/wezterm.lua" "$HOME/.wezterm.lua"
+ln -sf "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 
 echo "Dotfiles installation complete!"

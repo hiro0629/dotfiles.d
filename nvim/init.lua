@@ -1,7 +1,8 @@
 -- ==============================
 -- 🌟 Basic Neovim Config 🌟
 -- ==============================
-
+-- Short Cut
+vim.api.nvim_create_user_command("Config", "edit ~/.config/nvim/init.lua", {})
 -- Leader Key
 -- vim.g.mapleader = " "  -- Set <Space> as the leader key
 

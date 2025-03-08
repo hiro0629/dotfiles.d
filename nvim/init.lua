@@ -49,8 +49,9 @@ vim.o.swapfile = false  -- Disable swap files
 -- 
 -- local keymap = vim.keymap.set  -- Shortcut for setting keymaps
 -- 
--- -- Fast Escape in Insert Mode
-vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
+-- Fast Escape in Insert Mode
+-- vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
 vim.o.timeoutlen = 300  -- Reduce delay before recognizing 'jj' (default is 1000ms)
 -- 
 -- 

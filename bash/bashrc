@@ -1,20 +1,8 @@
-# Alias
-alias wf='~/bin/WorkFlowy/workflowy &'
-alias py='python3'
-alias sl='sl | lolcat'
-alias fortune='fortune | lolcat'
-alias cmatrix='cmatrix | lolcat'
-alias rm='trash-put'
-alias ya='yazi'
-alias bsrc='vi ~/.bashrc"
+source ~/new_dotfiles/bash/bash_aliases
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=5000 
 HISTFILESIZE=10000
-HISTIGNORE='history:pwd:ls:ls *:ll:exit'
-HISTTIMEFORMAT='%F %T '
-
-
+HISTIGNORE='history:pwd:ls:ll:exit'
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)

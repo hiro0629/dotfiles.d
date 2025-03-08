@@ -12,6 +12,8 @@ OS_TYPE=$(uname -s)
 if [[ "$OS_TYPE" == "Linux" ]]; then
 	ln -sf "$DOTFILES_DIR/inputrc" "$HOME/.inputrc"
 fi
+ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
+
 
 echo "Dotfiles installation complete!"
 

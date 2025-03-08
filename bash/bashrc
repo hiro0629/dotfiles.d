@@ -1,4 +1,7 @@
 source ~/new_dotfiles/bash/bash_aliases
+if [ -f ~/local_config.d/alias ]; then
+    source ~/local_config.d/alias
+fi
 
 HISTSIZE=5000 
 HISTFILESIZE=10000

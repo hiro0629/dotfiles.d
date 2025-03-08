@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES_DIR="$HOME/new_dotfiles"
+DOTFILES_DIR="$HOME/dotfiles.d"
 
 # シンボリックリンク作成
 ln -sf "$DOTFILES_DIR/bash/bashrc" "$HOME/.bashrc"

@@ -1,4 +1,5 @@
-source ~/new_dotfiles/bash/bash_aliases
+DOTFILES_DIR="$HOME/dotfiles.d"
+source "$DOTFILES_DIR/bash/bash_aliases"
 if [ -f ~/local_config.d/alias ]; then
     source ~/local_config.d/alias
 fi

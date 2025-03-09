@@ -4,6 +4,7 @@
     name = Tomohisa Hirota
     email = hirota.tomohisa@gmail.com
 [alias]
+    br = branch
     ci = commit
     co = checkout
     st = status -sb

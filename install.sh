@@ -23,7 +23,11 @@ ln -sf "$DOTFILES_DIR/tmux.conf" "$HOME/.tmux.conf"
 if [[ "$OS_TYPE" == "Linux" ]]; then
 	ln -sf "$DOTFILES_DIR/inputrc" "$HOME/.inputrc"
 fi
-ln -sf "$DOTFILES_DIR/wezterm.lua" "$HOME/.wezterm.lua"
+if [[ ! -d "$HOME/.config/wezterm" ]]; then
+	mkdir ~/.config/wezterm
+fi
+ln -sf "$DOTFILES_DIR/wezterm/wezterm.lua" "$HOME/.config/wezterm/wezterm.lua"
+ln -sf "$DOTFILES_DIR/wezterm/keybind.lua" "$HOME/.config/wezterm/keybind.lua"
 ln -sf "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 
 echo "Dotfiles installation complete!"

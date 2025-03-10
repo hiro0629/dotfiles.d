@@ -45,8 +45,6 @@ config.mouse_bindings = {
 }
 
 
-
-
 -- exit
 config.exit_behavior = 'CloseOnCleanExit'
 

@@ -8,12 +8,11 @@ end
 
 -- カラースキームの設定
 -- config.color_scheme = 'AdventureTime'
--- config.color_scheme = 'Dracula+'
-config.color_scheme = 'Dark Ocean'
+config.color_scheme = 'Dracula+'
+-- config.color_scheme = 'Dark Ocean'
 
 -- 背景透過
 config.window_background_opacity = 0.78
-
 
 -- Scroll back
 config.scrollback_lines = 3500
@@ -22,7 +21,7 @@ config.scrollback_lines = 3500
 config.font = wezterm.font("Meslo LG L for Powerline", {weight="Medium", stretch="Normal", style="Normal"})
 
 -- フォントサイズの設定
-config.font_size = 12
+config.font_size = 20
 
 
 -- Paste

@@ -14,7 +14,11 @@ fi
 # ln -sf "$DOTFILES_DIR/zsh/zsh_profile" "$HOME/.zsh_profile"
 ln -sf "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
 ln -sf "$DOTFILES_DIR/vimrc" "$HOME/.vimrc"
-ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES_DIR/git/gitconfig" "$HOME/.gitconfig"
+if [[ ! -d "$HOME/.config/git" ]]; then
+	mkdir ~/.config/git
+fi
+ln -sf "$DOTFILES_DIR/git/ignore" "$HOME/.config/git/ignore"
 ln -sf "$DOTFILES_DIR/tmux.conf" "$HOME/.tmux.conf"
 if [[ "$OS_TYPE" == "Linux" ]]; then
 	ln -sf "$DOTFILES_DIR/inputrc" "$HOME/.inputrc"

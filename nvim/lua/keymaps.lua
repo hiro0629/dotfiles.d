@@ -1,0 +1,30 @@
+-- -- ==============================
+-- -- 🎯 Keybindings 🎯
+-- -- ==============================
+-- 
+-- Leader Key
+-- vim.g.mapleader = " "  -- Set <Space> as the leader key
+-- local keymap = vim.keymap.set  -- Shortcut for setting keymaps
+-- 
+-- Fast Escape in Insert Mode
+vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
+vim.o.timeoutlen = 300  -- Reduce delay before recognizing 'jj' (default is 1000ms)
+-- 
+-- 
+-- -- Window Navigation (Similar to Tmux)
+-- keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
+-- keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
+-- keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
+-- keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
+-- 
+-- -- Easy Saving and Quitting
+-- keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
+-- keymap("n", "<leader>q", ":q<CR>", { noremap = true, silent = true })
+-- keymap("n", "<leader>x", ":x<CR>", { noremap = true, silent = true })
+-- 
+-- -- Move Lines Up/Down (Like VSCode)
+-- keymap("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
+-- keymap("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true })
+-- keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { noremap = true, silent = true })
+-- keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { noremap = true, silent = true })
+-- 

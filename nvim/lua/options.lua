@@ -1,0 +1,44 @@
+-- ==============================
+-- 🌟 Basic Neovim Config 🌟
+-- ==============================
+-- Short Cut
+vim.api.nvim_create_user_command("Config", "edit ~/.config/nvim/init.lua", {})
+
+-- UI Enhancements
+vim.o.number = true  -- Show line numbers
+vim.o.relativenumber = true  -- Show relative numbers
+vim.o.cursorline = true  -- Highlight the current line
+vim.o.termguicolors = true  -- Enable true colors
+vim.o.signcolumn = "yes"  -- Always show sign column
+vim.o.scrolloff = 3  -- Keep cursor 8 lines from screen edge
+
+-- Indentation & Tabs
+vim.o.expandtab = true  -- Use spaces instead of tabs
+vim.o.tabstop = 4  -- Tab size of 4 spaces
+vim.o.softtabstop = 4  -- Makes backspace and <Tab> behave consistently
+vim.o.shiftwidth = 4  -- Indentation level
+vim.o.smartindent = true  -- Auto-indent new lines
+vim.o.autoindent = true  -- Copy indentation from the previous line
+
+-- -- Performance
+-- vim.o.updatetime = 300  -- Faster UI updates
+-- vim.o.timeoutlen = 300  -- Reduce key mapping timeout
+-- vim.o.hidden = true  -- Keep buffers open in the background
+-- 
+-- -- Clipboard Integration
+-- vim.o.clipboard = "unnamedplus"  -- Use system clipboard
+-- 
+-- -- Search & Navigation
+-- vim.o.ignorecase = true  -- Ignore case in searches
+-- vim.o.smartcase = true  -- Case-sensitive if uppercase is used
+-- vim.o.incsearch = true  -- Highlight matches while searching
+-- vim.o.hlsearch = false  -- Do not highlight search results
+-- 
+-- -- Undo & Backup
+-- vim.o.undofile = true  -- Enable persistent undo
+vim.o.swapfile = false  -- Disable swap files
+
+-- -- Split Windows Behavior
+-- vim.o.splitbelow = true  -- Open new horizontal splits below
+-- vim.o.splitright = true  -- Open new vertical splits to the right
+-- 

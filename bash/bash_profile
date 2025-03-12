@@ -1,0 +1,9 @@
+# 環境変数
+# export PATH="$HOME/bin:$PATH"
+export EDITOR=nvim
+
+# ~/.bashrc を読み込む（重要）
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
+

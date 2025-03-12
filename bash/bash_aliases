@@ -1,0 +1,11 @@
+# Alias
+alias wf='~/bin/WorkFlowy/workflowy &'
+alias py='python3'
+alias sl='sl | lolcat'
+alias fortune='fortune | lolcat'
+alias cmatrix='cmatrix | lolcat'
+alias rm='trash-put'
+alias ya='yazi'
+alias bashrc='vi ~/.bashrc'
+alias v='nvim'
+alias vi='vim'

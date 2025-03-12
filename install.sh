@@ -6,9 +6,9 @@ OS_TYPE=$(uname -s)
 # bash
 ln -sf "$DOTFILES_DIR/bash/bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES_DIR/bash/bash_profile" "$HOME/.bash_profile"
-if [[ ! -d "$HOME/local_config.d" ]]; then
-	mkdir ~/local_config.d
-	touch ~/local_config.d/alias
+mkdir -p ~/local_config.d
+if [[ ! -f "$HOME/local_config.d/bash_alias" ]]; then
+	touch ~/local_config.d/bash_alias
 fi
 
 # zsh
@@ -29,7 +29,7 @@ ln -sf "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
 ln -sf "$DOTFILES_DIR/nvim/lua/keymaps.lua" "$HOME/.config/nvim/lua/keymaps.lua"
 ln -sf "$DOTFILES_DIR/nvim/lua/options.lua" "$HOME/.config/nvim/lua/options.lua"
 ln -sf "$DOTFILES_DIR/nvim/lua/config/lazy.lua" "$HOME/.config/nvim/lua/config/lazy.lua"
-ln -s "$DOTFILES_DIR/nvim/lua/config/plugins" "$HOME/.config/nvim/lua/config/"
+ln -sf "$DOTFILES_DIR/nvim/lua/config/plugins" "$HOME/.config/nvim/lua/config/"
 
 # vim
 ln -sf "$DOTFILES_DIR/vimrc" "$HOME/.vimrc"

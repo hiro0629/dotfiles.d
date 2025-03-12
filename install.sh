@@ -25,13 +25,13 @@ ln -sf "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 
 # nvim
 if [[ ! -d "$HOME/.config/nvim" ]]; then
-	mkdir -p ~/.config/nvim/lua/config/plugins
+	mkdir -p ~/.config/nvim/lua/config/
 fi
 ln -sf "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
 ln -sf "$DOTFILES_DIR/nvim/lua/keymaps.lua" "$HOME/.config/nvim/lua/keymaps.lua"
 ln -sf "$DOTFILES_DIR/nvim/lua/options.lua" "$HOME/.config/nvim/lua/options.lua"
 ln -sf "$DOTFILES_DIR/nvim/lua/config/lazy.lua" "$HOME/.config/nvim/lua/config/lazy.lua"
-ln -sf "$DOTFILES_DIR/nvim/lua/config/plugins" "$HOME/.config/nvim/lua/config/"
+ln -s "$DOTFILES_DIR/nvim/lua/config/plugins" "$HOME/.config/nvim/lua/config/"
 
 # vim
 ln -sf "$DOTFILES_DIR/vimrc" "$HOME/.vimrc"

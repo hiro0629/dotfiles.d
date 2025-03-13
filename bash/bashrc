@@ -1,7 +1,7 @@
 DOTFILES_DIR="$HOME/dotfiles.d"
 source "$DOTFILES_DIR/bash/bash_aliases"
-if [ -f ~/local_config.d/alias ]; then
-    source ~/local_config.d/alias
+if [ -f ~/local_config.d/bash_alias ]; then
+    source ~/local_config.d/bash_alias
 fi
 
 HISTSIZE=5000 

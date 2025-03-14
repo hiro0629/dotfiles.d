@@ -1,6 +1,5 @@
 local wezterm = require 'wezterm'
 
-
 local config = {}
 
 if wezterm.config_builder then
@@ -56,8 +55,6 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
    }
 end)
 
-
-
 -- Scroll back
 config.scrollback_lines = 3500
 
@@ -84,6 +81,7 @@ config.mouse_bindings = {
 	},
 }
 
+config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
 
 -- exit
 config.exit_behavior = 'CloseOnCleanExit'

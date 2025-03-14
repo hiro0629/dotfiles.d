@@ -14,8 +14,9 @@ config.font_size = 16
 
 -- カラースキームの設定
 -- config.color_scheme = 'AdventureTime'
-config.color_scheme = 'Dracula+'
+-- config.color_scheme = 'Dracula+'
 -- config.color_scheme = 'Dark Ocean'
+config.color_scheme = 'nightfox'
 -- 背景透過
 config.window_background_opacity = 0.78
 

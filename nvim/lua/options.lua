@@ -1,9 +1,6 @@
 -- ==============================
 -- 🌟 Basic Neovim Config 🌟
 -- ==============================
--- Short Cut
-vim.api.nvim_create_user_command("Config", "edit ~/.config/nvim/init.lua", {})
-
 -- UI Enhancements
 vim.o.number = true  -- Show line numbers
 vim.o.relativenumber = true  -- Show relative numbers
@@ -19,6 +16,10 @@ vim.o.softtabstop = 4  -- Makes backspace and <Tab> behave consistently
 vim.o.shiftwidth = 4  -- Indentation level
 vim.o.smartindent = true  -- Auto-indent new lines
 vim.o.autoindent = true  -- Copy indentation from the previous line
+
+vim.o.statusline = "%m %y %r %=%-14.(%l,%c%V%) %P [%{mode()}]"
+
+
 
 -- -- Performance
 -- vim.o.updatetime = 300  -- Faster UI updates

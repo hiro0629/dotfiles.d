@@ -19,6 +19,9 @@ config.color_scheme = 'nightfox'
 -- 背景透過
 config.window_background_opacity = 0.78
 
+config.automatically_reload_config = true
+config.window_close_confirmation = "NeverPrompt"
+config.default_cursor_style = "BlinkingBar"
 config.macos_window_background_blur = 20
 config.window_decorations = "NONE"
 config.window_frame = {
@@ -81,7 +84,11 @@ config.mouse_bindings = {
 	},
 }
 
-config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
+config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 2000 }
+
+
+
+
 
 -- exit
 config.exit_behavior = 'CloseOnCleanExit'

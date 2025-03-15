@@ -3,9 +3,8 @@
 - Mac mini
 ### Install
 - fzf
-- lazygit
+- telescope
 - btop / htop / grances
-- yazi
 - atuin
 - zellij
 - gdu

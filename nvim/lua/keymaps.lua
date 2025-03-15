@@ -12,5 +12,6 @@ keymap("n", "<leader>c", ":nohlsearch<CR>", { noremap = true, silent = true })
 keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
 vim.o.timeoutlen = 1000  -- Reduce delay before recognizing 'jj' (default is 1000ms)
 
+keymap("n", "<leader>t", ":ToggleTerm<CR>", { noremap = true, silent = true })
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 -- keymap("n", "<leader>f", ":Telescope find_files<CR>", { noremap = true, silent = true })

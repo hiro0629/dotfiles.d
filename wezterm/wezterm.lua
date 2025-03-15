@@ -1,4 +1,5 @@
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
+local keymaps = require("keybind")
 
 local config = {}
 
@@ -37,15 +38,19 @@ config.colors = {
    inactive_tab_edge = "none",
  },
 }
+-- ✅ ペーンの分割線の色を設定
+config.colors = {
+  split = "#8699C0", -- 薄い灰色と青の中間の色
+}
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
    local background = "#2f1922"
    local foreground = "#5c6d74"
 
    if tab.is_active then
---     background = "e6dccf"
+     background = "e6dccf"
 --     background = "2f1922"
-     background = "232f19"
+--     background = "#232f19"
      foreground = "#FFFFFF"
    end
 
@@ -84,11 +89,11 @@ config.mouse_bindings = {
 	},
 }
 
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 2000 }
-
-
-
-
+-- ✅ Import keymaps from keymaps.lua
+config.leader = keymaps.leader -- Use the imported leader key
+for _, keymap in ipairs(keymaps.keys) do
+  table.insert(config.keys, keymap) -- Merge keymaps into config.keys
+end
 
 -- exit
 config.exit_behavior = 'CloseOnCleanExit'

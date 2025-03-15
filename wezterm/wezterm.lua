@@ -18,7 +18,7 @@ config.font_size = 13
 -- config.color_scheme = 'Dark Ocean'
 config.color_scheme = 'nightfox'
 -- 背景透過
-config.window_background_opacity = 0.78
+config.window_background_opacity = 0.98
 
 config.automatically_reload_config = true
 config.window_close_confirmation = "NeverPrompt"
@@ -87,6 +87,33 @@ config.mouse_bindings = {
 		mods = "NONE",
 		action = act({ PasteFrom = "Clipboard" }),
 	},
+}
+
+
+-- ✅ 初期の背景透明度
+config.window_background_opacity = 0.78
+
+-- ✅ 透明度の切り替え用の関数
+local is_transparent = false -- トグル状態を記録
+
+wezterm.on("toggle-opacity", function(window, pane)
+  is_transparent = not is_transparent -- 状態を切り替え
+
+  local new_opacity = is_transparent and 0.78 or 0.98 -- 切り替え
+  window:set_config_overrides({ window_background_opacity = new_opacity })
+
+end)
+
+-- ✅ Leader キーを設定
+config.leader = { key = "j", mods = "CTRL" } -- 例: Ctrl + j を Leader に設定
+
+-- ✅ Leader + c で透明度をトグル
+config.keys = {
+  {
+    key = "c",
+    mods = "LEADER",
+    action = wezterm.action.EmitEvent("toggle-opacity"),
+  },
 }
 
 -- ✅ Import keymaps from keymaps.lua

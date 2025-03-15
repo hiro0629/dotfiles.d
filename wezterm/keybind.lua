@@ -44,13 +44,29 @@ local keymaps = {
       mods = "LEADER",
       action = wezterm.action.ActivatePaneDirection("Up"),
     },
+
+
+    -- ✅ 追加: 次のペーンへ移動 (ペーン番号順)
     {
-      key = "h",
+      key = "n",
+      mods = "LEADER",
+      action = wezterm.action.ActivatePaneByIndex(1), -- 次のペーンへ
+    },
+
+    -- ✅ 追加: 前のペーンへ移動
+    {
+      key = "p",
+      mods = "LEADER",
+      action = wezterm.action.ActivatePaneByIndex(0), -- 最初のペーンへ
+    },
+
+    {
+      key = "-",
       mods = "LEADER",
       action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
     },
     {
-      key = "v",
+      key = "1",
       mods = "LEADER",
       action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     },

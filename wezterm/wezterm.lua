@@ -8,7 +8,10 @@ if wezterm.config_builder then
 end
 
 -- フォントの設定
-config.font = wezterm.font("Meslo LG L for Powerline", {weight="Medium", stretch="Normal", style="Normal"})
+-- config.font = wezterm.font("Source Code Pro for Powerline", {weight="Medium", stretch="Normal", style="Normal"})
+config.font = wezterm.font("Hack Nerd Font", {weight="Medium", stretch="Normal", style="Normal"})
+-- config.font = wezterm.font("JetBrainsMono Nerd Font", {weight="Medium", stretch="Normal", style="Normal"})
+--config.font = wezterm.font("FiraCode Nerd Font", {weight="Medium", stretch="Normal", style="Normal"})
 -- フォントサイズの設定
 config.font_size = 13
 

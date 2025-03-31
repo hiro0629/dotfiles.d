@@ -23,7 +23,6 @@ vim.o.statusline = "%m %y %r %=%-14.(%l,%c%V%) %P [%{mode()}]"
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 
-
 -- -- Performance
 -- vim.o.updatetime = 300  -- Faster UI updates
 -- vim.o.timeoutlen = 300  -- Reduce key mapping timeout

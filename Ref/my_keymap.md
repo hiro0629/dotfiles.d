@@ -5,3 +5,5 @@
 -- Space + g : lazygit ( /nvim/lua/config/plugins/toggleterm.lua )
 -- Space + e : tree-nvim ( nvim/lua/keymaps.lua )
 -- Space + t : ToggleTerm ( /nvim/lua/config/plugins/toggleterm.lua )
+-- Shift +  Ctrl + v : Paste
+

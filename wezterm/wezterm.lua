@@ -73,15 +73,10 @@ config.scrollback_lines = 3500
 local act = wezterm.action
 
 config.keys = {
-
 -- paste from the clipboard
-
 { key = 'v', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
-
 -- paste from the primary selection
-
 { key = 'v', mods = 'CTRL', action = act.PasteFrom 'PrimarySelection' },
-
 }
 
 config.mouse_bindings = {
@@ -92,7 +87,6 @@ config.mouse_bindings = {
 	},
 }
 
-
 -- ✅ 初期の背景透明度
 config.window_background_opacity = 0.78
 
@@ -102,13 +96,10 @@ local is_transparent = false -- トグル状態を記録
 wezterm.on("toggle-opacity", function(window, pane)
   is_transparent = not is_transparent -- 状態を切り替え
 
-  local new_opacity = is_transparent and 0.78 or 0.98 -- 切り替え
+  local new_opacity = is_transparent and 0.78 or 1.00 -- 切り替え
   window:set_config_overrides({ window_background_opacity = new_opacity })
 
 end)
-
--- ✅ Leader キーを設定
-config.leader = { key = "j", mods = "CTRL" } -- 例: Ctrl + j を Leader に設定
 
 -- ✅ Leader + c で透明度をトグル
 config.keys = {

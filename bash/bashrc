@@ -4,6 +4,11 @@ if [ -f ~/local_config.d/bash_alias ]; then
     source ~/local_config.d/bash_alias
 fi
 
+# Original setting
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 HISTSIZE=5000 
 HISTFILESIZE=10000
 HISTIGNORE='history:pwd:ls:ll:exit'
@@ -85,7 +90,7 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
+#     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -102,14 +107,6 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -133,4 +130,16 @@ case ":${PATH}:" in
         export PATH="$HOME/.cargo/bin:$PATH"
         ;;
 esac
+
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+
+function ycd() {
+  local temp_file=$(mktemp)
+  yazi "$@" --chooser-file="$temp_file"
+  if [ -s "$temp_file" ]; then
+    cd "$(cat "$temp_file")"
+  fi
+  rm -f "$temp_file"
+}
+

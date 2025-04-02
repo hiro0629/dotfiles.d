@@ -16,4 +16,8 @@ alias grep='grep --color=auto -n -P'
 alias dot='cd ~/dotfiles.d/bash/'
 alias bcat='batcat'
 alias cl='clear'
-# alias z='zoxide'
+alias gs='echo "gs(ghost script) is disabled by alias setting"'
+alias dirs='dirs -v'
+alias gd=pushd
+alias pd=popd
+alias slurp='pushd - && pushd' # ref oreilly efficiend linux command

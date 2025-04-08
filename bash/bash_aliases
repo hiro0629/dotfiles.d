@@ -21,3 +21,4 @@ alias dirs='dirs -v'
 alias gd=pushd
 alias pd=popd
 alias slurp='pushd - && pushd' # ref oreilly efficiend linux command
+alias dk='docker'
